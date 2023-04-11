@@ -6,32 +6,65 @@ import java.sql.SQLException;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+/**
+ * The type Conector mysql.
+ */
 public class ConectorMysql {
+    /**
+     * The constant logger.
+     */
     final static Logger logger = LogManager.getLogger("HelloWorld");
 
 
-    // Librería de MySQL
+    /**
+     * The Driver.
+     */
+// Librería de MySQL
     public String driver = "com.mysql.cj.jdbc.Driver";
 
-    // Nombre de la base de datos
+    /**
+     * The Database.
+     */
+// Nombre de la base de datos
     public String database = "empleados_departamentos";
 
-    // Host
+    /**
+     * The Hostname.
+     */
+// Host
     public String hostname = "localhost";
 
-    // Puerto
+    /**
+     * The Port.
+     */
+// Puerto
     public String port = "3306";
 
-    // Ruta de nuestra base de datos (desactivamos el uso de SSL con "?useSSL=false")
+    /**
+     * The Url.
+     */
+// Ruta de nuestra base de datos (desactivamos el uso de SSL con "?useSSL=false")
     public String url = "jdbc:mysql://" + hostname + ":" + port + "/" + database + "?useSSL=false";
     // jdbc:mysql://localhost:3306/empleados_departamentos?useSSL=false
 
-    // Nombre de usuario
+    /**
+     * The Username.
+     */
+// Nombre de usuario
     public String username = "root";
 
-    // Clave de usuario
+    /**
+     * The Password.
+     */
+// Clave de usuario
     public String password = "password";
 
+    /**
+     * Conectar my sql connection.
+     *
+     * @return the connection
+     */
     public Connection conectarMySQL() {
         Connection conn = null;
 
